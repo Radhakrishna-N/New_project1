@@ -1,4 +1,50 @@
-<h1>Listing statuses</h1>
+
+
+<div class="page-header">
+  <h3>All of the statuses</h3>
+</div>
+
+<%= link_to "Post a New status", new_status_path, class: "btn btn-large btn-primary disabled"%>
+<br><br>
+
+<% @statuses.each do |status| %>
+ 
+    
+      <div class="status">
+         <strong><%= status.name %></strong>
+         <p><%= status.content %> </P>
+    
+          <div class="meta">
+            <%= link_to time_ago_in_words(status.created_at) + " ago  ", status %>
+    
+              <span class="admin">
+                <%= link_to "Edit", edit_status_path(status) %>  |
+                <%= link_to "Delete", status, method: :delete, data:{ confirm: "Are you sure want to delete?" } %>
+              </span>  
+
+         </div> 
+      
+      
+    
+
+
+
+<% end %>
+
+
+
+
+
+<!-- #t OLD DATA 
+<div class="bs-docs-example">
+
+            <div class="well">
+              Look, I'm in a well!
+            </div>
+          </div>
+
+
+
 
 <table>
   <tr>
@@ -23,3 +69,4 @@
 <br />
 
 <%= link_to 'New Status', new_status_path %>
+-->
