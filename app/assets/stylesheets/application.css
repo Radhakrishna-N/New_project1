@@ -17,11 +17,30 @@ body {
 }
 
 .container-fluid {
- 	margin: 0% -1.45%
+ 	margin: 0.1% -1.45%;
+ 	padding-right: 10%;
 }
-.span2 {
+.span2 {  
 	margin: 0% 0%;
 	padding-top: -20%;
-	background-color: #CBC9C9;
+	background-color: #B8B8B8 ;
+
+}
+
+.navbar navbar-fixed-top {
+	background-color: #A0A0A0 ;
+}
+
+
+.side-menu {
+	text-indent: 15px;
+	vertical-align: middle;
+	margin: -10% 0%;
+	padding: 0% 0%;
+
+}
+
+a:link {
+    color: #505050   ;
 }
 
